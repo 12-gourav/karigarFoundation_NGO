@@ -1,13 +1,15 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import img from "../assets/img/qr.jpeg"
+import img from "../assets/img/qr.jpeg";
 
 const Donation = () => {
   return (
     <>
       <Navbar />
       <section className="donation">
-        <h1>Support Karigar Foundation</h1>
+        <h1>
+          Support <span>Karigar Foundation</span>
+        </h1>
         <p>
           Your contribution helps us empower workers, artisans, and their
           families. Every donation goes directly towards providing relief,
@@ -15,27 +17,61 @@ const Donation = () => {
           it the most.
         </p>
         <div className="donation-why">
-          <h2>Why Your Donation Matters</h2>
+          <h2>
+            Why Your <span>Donation Matters</span>
+          </h2>
           <ul>
             <li>
-              💰 Provide financial relief to accident-affected workers and their
-              families.
+              <div className="circle">💰</div>
+              <p>
+                Many workers and artisans face unexpected hardships due to
+                workplace accidents or sudden income loss. Your donation helps
+                provide immediate financial relief to affected families,
+                covering essentials like food, rent, and emergency needs. This
+                support ensures they can survive with dignity during the most
+                difficult times.
+              </p>
             </li>
             <li>
-              🏥 Ensure access to healthcare and rehabilitation for injured
-              workers.
+              <div className="circle">🏥</div>
+              <p>
+                Healthcare costs can be overwhelming for injured workers. With
+                your support, we make quality medical care, rehabilitation, and
+                post-accident support accessible to those who need it most.
+                Donations contribute to covering hospital bills, medicines,
+                therapy, and long-term care — giving injured workers a real
+                chance at recovery and independence.
+              </p>
             </li>
             <li>
-              📚 Support children’s education and skill development programs.
+              <div className="circle">📚</div>
+              <p>
+                Children of laborers and artisans often drop out of school due
+                to financial struggles. Your donation empowers us to provide
+                scholarships, books, uniforms, and school supplies so these
+                children can continue their education. We also run skill
+                development workshops for youth and adults, enabling them to
+                learn new trades and secure sustainable livelihoods.
+              </p>
             </li>
             <li>
-              🎨 Preserve traditional crafts and empower artisans with new
-              opportunities.
+              <div className="circle">🎨</div>
+              <p>
+                India’s rich cultural heritage depends on artisans who practice
+                centuries-old crafts. Sadly, many are abandoning their art due
+                to lack of financial stability. Your support helps us promote,
+                train, and provide market access for artisans so they can
+                sustain their livelihoods. By empowering them with new
+                opportunities, you’re not only supporting families but also
+                preserving cultural heritage for future generations.
+              </p>
             </li>
           </ul>
         </div>
         <div className="donation-methods">
-          <h2>Ways You Can Donate</h2>
+          <h2>
+            Ways You <span>Can Donate</span>
+          </h2>
 
           <div className="bank-details">
             <h3>Bank Transfer</h3>
@@ -44,30 +80,29 @@ const Donation = () => {
                 <strong>Account Name:</strong> Karigar Foundation
               </li>
               <li>
-                <strong>Account Number:</strong> 1234567890
+                <strong>Account Number:</strong> 702120110000365
               </li>
               <li>
-                <strong>IFSC Code:</strong> ABCD0123456
+                <strong>IFSC Code:</strong> BKID0007021
               </li>
               <li>
-                <strong>Bank Name:</strong> XYZ Bank, Branch
+                <strong>Bank Name:</strong> Bank of India Bank, Lalganj
               </li>
             </ul>
-          </div>
-
-          <div className="qr-code">
+            <div className="line"></div>
             <h3>Scan & Pay</h3>
-            <p>
-              You can also donate instantly using UPI by scanning the QR code
-              below:
-            </p>
+            <ul>
+              <li>
+                <strong>UPI ID:</strong> boim-702164000365@boi
+              </li>
+              <li>
+                You can also donate instantly using UPI by scanning the QR code
+                below:
+              </li>
+            </ul>
             <img src={img} alt="Karigar Foundation Donation QR" />
-            <p>
-              <strong>UPI ID:</strong> boim-702164000365@boi
-            </p>
           </div>
         </div>
-
       </section>
       <Footer />
     </>

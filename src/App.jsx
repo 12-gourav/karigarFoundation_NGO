@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import Community from "./pages/Community";
 import About from "./pages/About";
 import Donation from "./pages/Donation";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/community" element={<Community />} />
         <Route path="/donation" element={<Donation />} />
+     <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );
