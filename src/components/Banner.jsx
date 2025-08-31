@@ -1,7 +1,12 @@
+import { useState } from "react";
 import img from "../assets/img/banner.svg";
 import Typewriter from "typewriter-effect";
+import CommunityForm from "./modals/CommunityForm";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const [open, setOpen] = useState(false);
+  const Navigate = useNavigate();
   return (
     <section className="banner">
       <div className="left">
@@ -27,11 +32,16 @@ const Banner = () => {
           shocks after accidents. We make sure their rights are respected and
           their families supported.
         </p>
-        <button>Join Community</button>
+        <div className="set">
+          <button onClick={() => setOpen(true)}>Join Community</button>
+          <button onClick={() => Navigate("/community")}>Learn More</button>
+        </div>
       </div>
       <div className="right">
         <img src={img} alt="banner image" />
       </div>
+
+      {open && <CommunityForm open={open} setOpen={setOpen} />}
     </section>
   );
 };
